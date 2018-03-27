@@ -1,6 +1,6 @@
 {
   "name": "brain-spiele",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
@@ -25,5 +25,13 @@
   "dependencies": {
     "readline-sync": "^1.4.9"
   },
-  "description": ""
+  "description": "Simple game",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bo712/project-lvl1-s248.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bo712/project-lvl1-s248/issues"
+  },
+  "homepage": "https://github.com/bo712/project-lvl1-s248#readme"
 }
