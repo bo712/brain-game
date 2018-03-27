@@ -1,5 +1,6 @@
 #!/usr/bin/nodejs
-import { readline } from '../index';
+import readline from '../index';
 
 console.log('Welcome to the Brain Games!');
+console.log('');
 readline();
