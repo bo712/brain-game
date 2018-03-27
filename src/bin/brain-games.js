@@ -1,6 +1,5 @@
-#!/usr/bin/nodejs
-import readline from '../index';
+#!/usr/bin/env node
+import askNameAndSayHi from '../index';
 
-console.log('Welcome to the Brain Games!');
-console.log('');
-readline();
+console.log('Welcome to the Brain Games!\n');
+askNameAndSayHi();
