@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import askNameAndSayHi from '../index';
+import { getName, greeting } from '../index';
 
-askNameAndSayHi();
+console.log('Welcome to the Brain Games\n');
+const userName = getName();
+greeting(userName);
