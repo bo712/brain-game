@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { welcome, greeting } from '../../index';
+import { welcome, greeting } from '../index';
 
 const question = () => {
   const num = Math.round((Math.random() * 100));
