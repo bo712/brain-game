@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { welcome, greeting } from '../index';
+import { welcome } from '../index';
 
 const numGenerator = () => Math.round((Math.random() * 20));
 
@@ -18,7 +18,7 @@ const calculator = (num1, num2, oper) => {
   }
 };
 
-const expression = () => {
+const engineOfGame = () => {
   const num1 = numGenerator();
   const num2 = numGenerator();
   const oper = operatorGenerator();
@@ -32,18 +32,20 @@ const expression = () => {
   return false;
 };
 
+
 const calcGame = () => {
-  welcome();
-  console.log('What is the result of the expression?\n');
-  const userName = readlineSync.question('May I have your name?');
-  greeting(userName);
-  for (let i = 0; i < 3; i += 1) {
-    if (!expression()) {
-      console.log(`Let's try again, ${userName}!`);
-      return;
+  const typeOfGame = 'What is the result of the expression?\n';
+  const userName = welcome(typeOfGame);
+  const startGame = () => {
+    for (let i = 0; i < 3; i += 1) {
+      if (!engineOfGame()) {
+        console.log(`Let's try again, ${userName}!`);
+        return;
+      }
     }
-  }
-  console.log(`Congratulations, ${userName}!`);
+    console.log(`Congratulations, ${userName}!`);
+  };
+  startGame();
 };
 
 export default calcGame;
