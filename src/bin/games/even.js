@@ -1,10 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getName, greeting } from '../../index';
-
-console.log('Welcome to the Brain Games!');
-console.log('Answer "yes" if number even otherwise answer "no".\n');
-const userName = getName();
-greeting(userName);
+import { welcome, greeting } from '../../index';
 
 const question = () => {
   const num = Math.round((Math.random() * 100));
@@ -19,6 +14,11 @@ const question = () => {
 };
 
 const evenGame = () => {
+  welcome();
+  console.log('Answer "yes" if number even otherwise answer "no".\n');
+  const userName = readlineSync.question('May I have your name?');
+  greeting(userName);
+
   for (let i = 0; i < 3; i += 1) {
     if (!question()) {
       console.log(`Let's try again, ${userName}!`);

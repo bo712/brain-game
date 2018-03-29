@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import games from './models/games';
+import game from './games/games';
 
-games();
+game();
