@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { welcome } from '../index';
+import welcome from '../index';
 
 const numGenerator = () => Math.round((Math.random() * 20));
 
@@ -31,7 +31,6 @@ const engineOfGame = () => {
   console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
   return false;
 };
-
 
 const calcGame = () => {
   const typeOfGame = 'What is the result of the expression?\n';
