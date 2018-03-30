@@ -1,6 +1,6 @@
 {
   "name": "brain-spiele",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "main": "index.js",
   "bin": {
     "brain-even": "dist/bin/brain-even.js",
