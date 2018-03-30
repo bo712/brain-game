@@ -1,4 +1,4 @@
-import welcome from '../index';
+import startGame from '../index';
 
 const questAndAns = () => {
   const num = Math.round((Math.random() * 100));
@@ -7,8 +7,8 @@ const questAndAns = () => {
 };
 
 const evenGame = () => {
-  const typeOfGame = 'Answer "yes" if number even otherwise answer "no".\n';
-  welcome(typeOfGame, questAndAns);
+  const taskForGame = 'Answer "yes" if number even otherwise answer "no".';
+  startGame(taskForGame, questAndAns);
 };
 
 export default evenGame;

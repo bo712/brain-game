@@ -1,23 +1,23 @@
-import welcome from '../index';
+import startGame from '../index';
 
-// return array.join('');
 const robinHood = (array) => {
-  for (let i = 0; i < array.length; i += 1) {
-    array[i] = Number(array[i]);
+  const arr = array;
+  for (let i = 0; i < arr.length; i += 1) {
+    arr[i] = Number(arr[i]);
   }
-  for (let i = 1; i < array.length; i += 1) {
-    array.sort();
-    if (array[i] > array[0] + 1) {
-      array[0] += 1;
-      array[i] -= 1;
-      i = 1;
+  for (let i = 1; i < arr.length; i += 1) {
+    arr.sort();
+    if (arr[i] > arr[0] + 1) {
+      arr[0] += 1;
+      arr[i] -= 1;
+      i = 0;
     }
   }
-  return array;
+  return arr;
 };
 
 export const questAndAns = () => {
-  const str = String(Math.round((Math.random() * 1000)));
+  const str = String(Math.round((Math.random() * 712)));
   const question = `${str}`;
   const array = str.split('');
   const correctAnswer = robinHood(array).join('');
@@ -25,8 +25,8 @@ export const questAndAns = () => {
 };
 
 const balanceGame = () => {
-  const typeOfGame = 'Balance the given number.\n';
-  welcome(typeOfGame, questAndAns);
+  const taskForGame = 'Balance the given number.';
+  startGame(taskForGame, questAndAns);
 };
 
 export default balanceGame;

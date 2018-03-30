@@ -1,4 +1,4 @@
-import welcome from '../index';
+import startGame from '../index';
 
 const operatorGenerator = () => {
   const i = Math.random();
@@ -24,8 +24,8 @@ const questAndAns = () => {
 };
 
 const calcGame = () => {
-  const typeOfGame = 'What is the result of the expression?\n';
-  welcome(typeOfGame, questAndAns);
+  const taskForGame = 'What is the result of the expression?';
+  startGame(taskForGame, questAndAns);
 };
 
 export default calcGame;
