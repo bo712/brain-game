@@ -1,7 +1,4 @@
-import readlineSync from 'readline-sync';
-import welcome, { startGame } from '../index';
-
-const numGenerator = () => Math.round((Math.random() * 20));
+import welcome from '../index';
 
 const operatorGenerator = () => {
   const i = Math.random();
@@ -17,25 +14,18 @@ const calculator = (num1, num2, oper) => {
     default: return num1 * num2;
   }
 };
-export const expression = () => {
-  const num1 = numGenerator();
-  const num2 = numGenerator();
+const questAndAns = () => {
+  const num1 = Math.round((Math.random() * 20));
+  const num2 = Math.round((Math.random() * 20));
   const oper = operatorGenerator();
-  const answer = readlineSync.question(`Question: ${num1} ${oper} ${num2}\nYour answer: `);
-  const correctAnswer = calculator(num1, num2, oper);
-  if (Number(answer) === correctAnswer) {
-    console.log('Correct!');
-    return true;
-  }
-  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-  console.log("Let's try again!");
-  return false;
+  const question = `${num1} ${oper} ${num2}`;
+  const correctAnswer = String(calculator(num1, num2, oper));
+  return [question, correctAnswer];
 };
 
 const calcGame = () => {
   const typeOfGame = 'What is the result of the expression?\n';
-  const userName = welcome(typeOfGame);
-  startGame(expression, userName);
+  welcome(typeOfGame, questAndAns);
 };
 
 export default calcGame;
