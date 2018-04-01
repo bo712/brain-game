@@ -1,3 +1,4 @@
+import { cons } from 'hexlet-pairs';
 import startGame from '../index';
 
 const isPrime = (num) => {
@@ -11,7 +12,7 @@ export const questAndAns = () => {
   const num = Math.round((Math.random() * 200));
   const question = `${num}`;
   const correctAnswer = (isPrime(num)) ? 'yes' : 'no';
-  return [question, correctAnswer];
+  return cons(question, correctAnswer);
 };
 
 const primeGame = () => {

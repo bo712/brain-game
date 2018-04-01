@@ -1,4 +1,6 @@
+import { cons } from 'hexlet-pairs';
 import startGame from '../index';
+
 
 const gcd = (num1, num2) => {
   if (num2 === 0) return num1;
@@ -10,7 +12,7 @@ export const questAndAns = () => {
   const num2 = Math.round((Math.random() * 20));
   const question = `${num1} ${num2}`;
   const correctAnswer = String(gcd(num1, num2));
-  return [question, correctAnswer];
+  return cons(question, correctAnswer);
 };
 
 const gcdGame = () => {

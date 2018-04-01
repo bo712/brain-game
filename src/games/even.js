@@ -1,9 +1,10 @@
+import { cons } from 'hexlet-pairs';
 import startGame from '../index';
 
 const questAndAns = () => {
   const num = Math.round((Math.random() * 100));
   const correctAnswer = (num % 2 === 0) ? 'yes' : 'no';
-  return [num, correctAnswer];
+  return cons(num, correctAnswer);
 };
 
 const evenGame = () => {

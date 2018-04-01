@@ -1,3 +1,4 @@
+import { cons } from 'hexlet-pairs';
 import startGame from '../index';
 
 const robinHood = (array) => {
@@ -21,7 +22,7 @@ export const questAndAns = () => {
   const question = `${str}`;
   const array = str.split('');
   const correctAnswer = robinHood(array).join('');
-  return [question, correctAnswer];
+  return cons(question, correctAnswer);
 };
 
 const balanceGame = () => {

@@ -1,3 +1,4 @@
+import { cons } from 'hexlet-pairs';
 import startGame from '../index';
 
 const balance = (num) => {
@@ -24,7 +25,7 @@ export const questAndAns = () => {
   const num = Math.round((Math.random() * 712));
   const question = `${num}`;
   const correctAnswer = balance(num);
-  return [question, correctAnswer];
+  return cons(question, correctAnswer);
 };
 
 const balance2Game = () => {

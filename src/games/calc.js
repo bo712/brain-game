@@ -1,3 +1,4 @@
+import { cons } from 'hexlet-pairs';
 import startGame from '../index';
 
 const operatorGenerator = () => {
@@ -20,7 +21,7 @@ const questAndAns = () => {
   const oper = operatorGenerator();
   const question = `${num1} ${oper} ${num2}`;
   const correctAnswer = String(calculator(num1, num2, oper));
-  return [question, correctAnswer];
+  return cons(question, correctAnswer);
 };
 
 const calcGame = () => {

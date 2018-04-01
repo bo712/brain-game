@@ -1,10 +1,11 @@
+import { cons } from 'hexlet-pairs';
 import startGame from '../index';
 
 const questAndAns = () => {
   const startNum = Math.round((Math.random() * 20)) + 1;
   const stepOfProgress = Math.round((Math.random() * 5)) + 1;
   const numOfSteps = 10;
-  const stepHole = Math.round((Math.random() * 4)) + 1;
+  const stepHole = Math.ceil(((1 + Math.random()) * 4));
   let leftNum;
 
   let result = `${startNum} `;
@@ -21,7 +22,7 @@ const questAndAns = () => {
   }
   const question = `${result}`;
   const correctAnswer = String(leftNum);
-  return [question, correctAnswer];
+  return cons(question, correctAnswer);
 };
 
 const progressionGame = () => {
