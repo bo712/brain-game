@@ -6,14 +6,14 @@
 [![Build Status](https://travis-ci.org/bo712/project-lvl1-s248.svg?branch=master)](https://travis-ci.org/bo712/project-lvl1-s248)
 
 
-##How to install:
+## How to install:
 `sudo npm i -g brain-spiele`
 
-##How to start:
+## How to start:
 after installation just type in console one of the commands:
-`brain-balance`
-`brain-calc`
-`brain-even`
-`brain-gcd`
-`brain-prime`
-`brain-progression`
+* `brain-balance`
+* `brain-calc`
+* `brain-even`
+* `brain-gcd`
+* `brain-prime`
+* `brain-progression`
